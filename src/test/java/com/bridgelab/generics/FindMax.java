@@ -1,39 +1,26 @@
 package com.bridgelab.generics;
 
+import java.util.Arrays;
+
 public class FindMax <E extends Comparable<E>>{
 
-    E first;
-    E second;
-    E third;
+    E[] arrayElements;
 
     //Default Constructor
     public FindMax(){
     }
-    //Parameterized constructor
-    public FindMax(E first, E second, E third) {
-        this.first = first;
-        this.second = second;
-        this.third = third;
+    public FindMax(E[] array) {
+        this.arrayElements=array;
     }
-    //Find maximum of three values
-    public static <E extends Comparable> E checkMaximum(E first, E second, E  third)
+
+    //function for check maximum of given inputs
+    public static <E extends Comparable> E checkMaximum(E... arrayElements )
     {
-        E max=first;
-        if (second.compareTo(max) > 0 )
-            max=second;
-        if ( third.compareTo(max) > 0 )
-            max=third;
-        return max;
-    }
-    public E checkMaximum() {
-        E maxResult = checkMaximum(first, second, third);
-        printMaximum(maxResult);
-        return maxResult;
-    }
-    //Print result
-    private static <E> void printMaximum(E maxResult) {
-        System.out.println("Maximum Among All is.."+maxResult);
+        Arrays.sort(arrayElements);
+        return arrayElements[arrayElements.length-1];
     }
 
-
+    {
+        System.out.println("Welcome To Find and Test Maximum Problem Using Generics");
+    }
 }
