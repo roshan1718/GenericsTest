@@ -26,4 +26,12 @@ public class TestMax {
         Assert.assertEquals(23, integers);
         System.out.println("Maximum Among All is.."+integers);
     }
+    @Test
+    public void givenThreeFloatNumber_FindMaxOfThem_ReturnMaximumOne() {
+        maxObject = new FindMax();
+        Float maxfloatNumber = FindMax.findMaxFloatingNumber(55.36f, 22.1f, 3.54f);
+        Assert.assertEquals((Float)55.36f, maxfloatNumber);
+        System.out.println("Maximum Among All is.."+maxfloatNumber);
+    }
+
 }
