@@ -60,4 +60,10 @@ public class TestMax {
         Assert.assertEquals("Strawberry", largestString);
         System.out.println("Largest String Among All is.."+largestString);
     }
+    @Test
+    public void givenThreeStrings_FindMaxOfThem_ReturnMaximumThree() {
+        String largestString = FindMax.findLargestString("Apple", "Berries", "Strawberry");
+        Assert.assertEquals("Strawberry", largestString);
+        System.out.println("Largest String Among All is.."+largestString);
+    }
 }
