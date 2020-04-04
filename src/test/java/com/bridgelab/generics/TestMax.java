@@ -19,5 +19,11 @@ public class TestMax {
         Assert.assertEquals(44, integers);
         System.out.println("Maximum Among All is.."+integers);
     }
-
+    @Test
+    public void givenThreeIntegers_FindMaxOfThem_ReturnMaximumThree() {
+        maxObject = new FindMax();
+        int integers = maxObject.findMaxInteger(7, 15, 23);
+        Assert.assertEquals(23, integers);
+        System.out.println("Maximum Among All is.."+integers);
+    }
 }
