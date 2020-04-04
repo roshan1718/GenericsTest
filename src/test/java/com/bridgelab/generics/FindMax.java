@@ -24,4 +24,16 @@ public class FindMax {
         return maxFloatingNumber;
     }
 
+    public static String findLargestString(String firstString, String secondString, String thirdString)
+    {
+        String largestString=firstString;
+
+        if (secondString.compareTo(largestString) > 0 )
+            largestString=secondString;
+        if ( thirdString.compareTo(largestString) > 0 )
+            largestString=thirdString;
+
+        return largestString;
+    }
+
 }

@@ -48,5 +48,10 @@ public class TestMax {
         Assert.assertEquals((Float)43.54f, maxfloatNumber);
         System.out.println("Maximum Among All is.."+maxfloatNumber);
     }
-
+    @Test
+    public void givenThreeStrings_FindMaxOfThem_ReturnMaximumOne() {
+        String largestString = FindMax.findLargestString("Strawberry", "Apple", "Aanana");
+        Assert.assertEquals("Strawberry", largestString);
+        System.out.println("Largest String Among All is.."+largestString);
+    }
 }
